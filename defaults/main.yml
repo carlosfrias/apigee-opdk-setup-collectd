@@ -1,0 +1,46 @@
+---
+# defaults file for opdk-setup-collectd
+collectd_interval: 10
+collectd_timeout: 2
+collectd_read_threads: 5
+collectd_write_queue_limit_high: 3000
+
+collectd_pkg_name: collectd
+collectd_version: 5.5.50
+collectd_version_ext: -6.fc23.x86_64.rpm
+
+collectd_src_filename: '{{ collectd_pkg_name }}-{{ collectd_version }}.tar.gz'
+collectd_file_repository: 'http://collectd.org/files'
+
+collectd_filename: 'collectd-{{ collectd_version }}{{ collectd_version_ext }}'
+collectd_filename_url: 'ftp://rpmfind.net/linux/fedora/linux/releases/23/Everything/x86_64/os/Packages/c/{{ collected_filename }}'
+
+collectd_generic_jmx_filename:  'collectd-generic-jmx-{{ collectd_version }}{{ collectd_version_ext }}'
+collectd_generic_jmx_url: 'ftp://rpmfind.net/linux/fedora/linux/releases/23/Everything/x86_64/os/Packages/c/{{ collectd_generic_jmx_filename }}'
+
+collectd_java_filename:  'collectd-java-{{ collectd_version }}{{ collectd_version_ext }}'
+collectd_java_url: 'ftp://rpmfind.net/linux/fedora/linux/releases/23/Everything/x86_64/os/Packages/c/{{ collectd_java_filename }}'
+
+collectd_base_dir: /usr/var/lib/collectd
+collectd_conf_file: /etc/collectd.conf
+collectd_conf_dir: /etc/collectd.d
+collectd_plugin_dir: /usr/lib/collectd
+collectd_types_db_dir: /usr/share/collectd
+collectd_pid_file: /var/run/collectd.pid
+collectd_src_parent_dir: /usr/local/src
+
+connection_sampling_interval: 10
+
+graphite_host: '{{ ansible_hostname }}'
+graphite_port: 2003
+graphite_http_port: 80
+
+mp_host: '{{ ansible_hostname }}'
+mp_jmx_port: 1101
+router_host: '{{ ansible_hostname }}'
+router_jmx_port: 1100
+router_http_port: 8081
+cassandra_host: '{{ ansible_hostname }}'
+cassandra_jmx_port: 7199
+ms_host: '{{ ansible_hostname }}'
+ms_jmx_port: 1099
