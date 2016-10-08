@@ -1,5 +1,5 @@
 ---
-# defaults file for opdk-setup-collectd
+# defaults file for apigee-opdk-setup-collectd
 collectd_interval: 10
 collectd_timeout: 2
 collectd_read_threads: 5

@@ -1,5 +1,5 @@
 ---
-# tasks file for opdk-setup-collectd
+# tasks file for apigee-opdk-setup-collectd
 - include: apigee-collectd-setup.yml
 
 - include: collectd-build-from-source.yml
